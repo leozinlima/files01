@@ -1,0 +1,80 @@
+/* position is a red square */
+
+/* There's static */
+default
+
+/* Below there's relative*/
+/* 
+offset relativo a si mesmo
+normal flow
+stacking context
+*/
+.position {
+    background-color: red;
+    
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1;
+}
+
+/* absolute */
+/* 
+fica em um determinado local na tela >> relativo ao containing block proximo ou initial
+!normal flow
+stacking context
+*/
+section {
+    position: relative;
+    border: 1px solid;
+}
+
+.position {
+    background-color: red;
+    
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1;
+}
+
+/* fixed */
+/* 
+fixo na tela >> relativo ao initial contain block
+!normal flow
+stacking context
+*/
+
+.position {
+    background-color: red;
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: auto;
+}
+
+/* sticky*/
+/* 
+relativo e fixo >> relativo ao elemento pai que tenha mecanismo de scroll
+normal flow
+stacking context
+*/
+
+section {
+    position: relative;
+    border: 1px solid;
+    overflow: scroll;
+    height: 100px;
+}
+
+.position {
+    background-color: red;
+    
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1;
+}
+
+inset: 0; /* top, bottom, left, right unidos */
