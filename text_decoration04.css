@@ -1,0 +1,28 @@
+/* pseudo-classes */
+
+/* div:hover {
+    background-color: #f2a6;
+} */
+
+div:not(.nao) {
+    background-color: #f2a6;
+}
+
+section:has(div:hover) {
+    border: 5px solid red;
+}
+
+:root {}
+
+span:nth-child(n) {}
+div:nth-child(2) {}
+
+/* pseudo-elements */
+
+div::first-letter {
+    font-size: 40px;
+}
+
+div::before {}
+
+div::after {}

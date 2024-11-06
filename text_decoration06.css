@@ -1,0 +1,84 @@
+/* Flexbox */
+
+/* 
+Concepts
+    flex
+        container
+        item
+    axis
+        main
+            start
+            end
+        cross
+            start
+            end
+    sizing
+*/
+
+/* 
+Direction
+    flex-direction
+        inversao de eixo
+        valores
+            row
+            column
+            reverse
+*/
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* ###################################################### */
+
+/* Alignment and spaces */
+
+/*
+justify-content
+    alinhamento dentro do container
+    distribuicao dos elementos no eixo principal
+    valores
+        flex-start
+        flex-end
+        center
+        space-evenly
+        space-around
+        space-between
+*/
+.container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 
+align-items
+    alinhamento no eixo cruzado
+    valores
+        stretch
+        flex-start
+        flex-end
+        center
+        baseline
+*/
+.container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* 
+gap
+    espaco entre elementos
+    valores
+        relativo (10%)
+        fixo (10px)
+        flexivel (2rem)
+*/
+
+/* 
+margin
+    auto
+*/

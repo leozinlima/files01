@@ -8,7 +8,7 @@ Table
 Tableless -> sem tabela
     float: left
     clear: both
-    <div style="float left"></div>
+    <div style="float: left"></div>
     <div style="float: right">outro conteudo</div>
     <div style="clear: both">mais conteudo</div>
 
@@ -17,7 +17,7 @@ Tableless -> sem tabela
 Flexbox
 .container {
     display: flex;
-    justify-content: center/ space-round;
+    justify-content: center/ space-around;
     flex-direction: column;
 }
 
