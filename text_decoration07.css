@@ -27,3 +27,68 @@ align-content
     align-content: flex-end;
     flex-wrap: wrap;
 }
+
+/* ################################################ */
+
+/* Sizing */
+
+/* 
+flex-basis
+    tamanho do item
+        relativo ao eixo principal
+    valores
+        auto
+        0
+        relativa, fixa ou flexivel
+*/
+
+/* 
+flex-grow
+    crescimento automatico do item
+    distribuicao conforme os espacos vazios
+*/
+
+/* 
+flex-shrink
+    encolhimento automatico do item
+*/
+
+/* 
+flex
+    shorthand
+        initial
+            0 1 auto
+        auto
+            1 1 auto
+        none
+            0 0 auto
+        um valor
+            se numerico
+                grow
+                    <grow> 1 0
+            se unit
+                basis
+                    1 1 <basis>
+        dois valores
+            grow | [shrink | basis]
+            se numerico
+                shrink
+                    <grow> <shrink> 0
+            se unit
+                basis
+                    <grow> 1 <basis>
+        tres valores
+            grow shrink basis
+                a ordem importa!
+*/
+
+/* ################################################ */
+
+/* Ordering */
+
+/* 
+order (default: 0; valores podem sem -1 < valor > 2
+    valor numerico negativo ou positivo
+    visual, mas nao estrutural
+    !acessibilidade
+*/

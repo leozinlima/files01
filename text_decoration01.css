@@ -71,7 +71,7 @@ section {
 .position {
     background-color: red;
     
-    position: absolute;
+    position: sticky;
     bottom: 20px;
     right: 20px;
     z-index: -1;
