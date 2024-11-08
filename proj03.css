@@ -1,1 +1,19 @@
-@import url(./global.css)
+@import url(./global.css);
+@import url(./nav.css);
+
+padding-block: 20px;
+list-style: none;
+
+width: 40px;
+height: 40px;
+object-fit: cover;
+border-radius: 50%;
+
+--font-family: "Poppins", sans-serif;
+--text-lg: bold 32px/125% var(--font-family);
+--text: 16px/1.5 var(--font-family);
+--text-md: 14px/170% var(--font-family);
+--text-sm: 12px/170% var(--font-family);
+
+padding-inline: 32px;
+margin-inline: auto;
