@@ -1,0 +1,236 @@
+## PROPRIEDADES FUNDAMENTAIS
+
+Todo grid é composto de 2 principais grupos:
+`container: o pai` e `items: o(s) filhos`
+
+---
+### CONTAINER (pai)
+
+- display: grid;
+- grid-template;
+    - grid-template-columns;
+    - grid-template-rows;
+    - grid-template-areas;
+- gap;
+    - row-gap;
+    - column-gap;
+
+---
+### ITEMS (filhos)
+
+- grid-column;
+    - grid-column-start;
+    - grid-column-end;
+- grid-row;
+    - grid-row-start;
+    - grid-row-end;
+- grid-area;
+
+#1
+#app {
+    display: grid/inline-grid;
+    margin-top: 30px;
+}
+
+#app > div {
+    border: 1px solid #ff0000;
+}
+
+span {
+    border: 1px solid #0000ff;
+}
+
+#2
+#app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr / repeat(3, 1fr) / 1fr 200px 50% 30vw;
+}
+
+#app > div {
+    border: 1px solid #f00;
+}
+
+span {
+    border: 1px solid #00f;
+}
+
+#3
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+
+    border: 2px solid #0f0;
+}
+
+#app > div {
+    border: 1px solid #f00;
+}
+
+span {
+    border: 1px solid #00f;
+}
+
+#3
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+
+    border: 2px solid #0f0;
+}
+
+#app > * {
+    border : 1px solid #f00;
+}
+
+#app header {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+#app main {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+
+#4
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    
+    grid-template-areas:
+    "A B B"
+    "A B B"
+    "A C D";
+
+    height: 100vh;
+}
+
+#app > * {
+    border : 1px solid #f00;
+}
+
+#app header {
+    grid-area: A;
+}
+
+#app main {
+    grid-area: B;
+}
+
+####
+
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+
+    height: 100vh;
+}
+
+#app > * {
+    border : 1px solid #f00;
+}
+
+#app header {
+    grid-area: header;
+}
+
+#app main {
+    grid-area: main;
+}
+
+#app footer {
+    grid-area: footer;
+}
+
+#5
+
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    
+    grid-template-areas:
+    "A B B"
+    "A B B"
+    "A C D";
+
+    gap: 30px;
+
+    height: 100vh;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+#app > * {
+    border : 1px solid #f00;
+}
+
+#app header {
+    grid-area: header;
+}
+
+#app main {
+    grid-area: main;
+}
+
+#7
+
+body {
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    
+    grid-template:
+    "A B B" 80px
+    "A B B" 40px
+    "A C D" 50px / 80px 1fr 2fr;
+
+    gap: 30px;
+
+    height: 100vh;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+#app > * {
+    border : 1px solid #f00;
+}
+
+#app header {
+    grid-area: header;
+}
+
+#app main {
+    grid-area: main;
+}

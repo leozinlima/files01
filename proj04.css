@@ -1,0 +1,63 @@
+/* nesting css */
+div:nth-child(2) {
+    margin-inline:auto;
+}
+
+/* utility-first */
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.card {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    /* &::before is the same of .card::before */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background: linear-gradient(
+            180degre,
+            transparent 0%,
+            #020627 100%
+        );
+    }
+}
+
+/* 
+html
+
+                <figure class="card">
+                    <img src="./assets/images/Image 01.png" alt="">
+                    
+                    <figcaption>
+                        <span>robótica</span>
+                        <h2>
+                            Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto e eficiência nas residências.
+                        </h2>
+                    </figcaption>
+                
+                </figure>
+
+
+*/
+
+#ai {
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+}
+
